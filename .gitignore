@@ -1,0 +1,56 @@
+# Archivos y carpetas generados por Visual Studio
+.vs/
+*.user
+*.suo
+
+# Carpetas de compilación
+bin/
+obj/
+
+# Resultados de pruebas locales
+TestResults/
+*.trx
+
+# Archivos de log y temporales
+*.log
+*.tmp
+*.bak
+*.old
+*.swp
+
+# Archivos de base de datos locales
+*.mdf
+*.ldf
+
+# Archivos de configuración de usuario
+*.userosscache
+*.sln.docstates
+
+# NuGet
+*.nupkg
+packages/
+project.lock.json
+artifacts/
+
+# VS Code
+.vscode/
+
+# Configuración específica del entorno
+*.DotSettings.user
+.idea/
+
+# Archivos de publicación
+publish/
+
+# Archivos de configuración de despliegue
+*.deploy.cmd
+*.deploy-readme.txt
+*.setparameters.xml
+*.parameters.xml
+
+# Archivos de caché o sistema
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+mono_crash.*

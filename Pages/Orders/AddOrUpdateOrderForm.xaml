@@ -1,0 +1,65 @@
+﻿<Window x:Class="prueba_tecnica_agroexport.AddOrUpdateOrder"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:prueba_tecnica_agroexport"
+        mc:Ignorable="d"
+        Title="Solicitud de orden" Height="450" Width="340">
+
+    <Window.Resources>
+        <!-- Estilos básicos -->
+        <Style TargetType="Label">
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Margin" Value="0,5,0,0"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Height" Value="25"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Margin" Value="0,0,0,10"/>
+            <Setter Property="Height" Value="25"/>
+        </Style>
+    </Window.Resources>
+
+    <Grid Margin="20">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Título -->
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <!-- Botones -->
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Título -->
+        <Label x:Name="TitleModal" Grid.Row="0" Content=""
+               FontSize="18" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,0,0,15"/>
+
+        <!-- Producto -->
+        <Label Content="Producto" Grid.Row="1"/>
+        <ComboBox x:Name="ComboBoxItems" Grid.Row="2" DisplayMemberPath="Name" SelectedValuePath="Id"/>
+
+        <!-- Cantidad -->
+        <Label Content="Cantidad" Grid.Row="3"/>
+        <TextBox x:Name="QuantityTextBox" Grid.Row="4"/>
+
+        <!-- Cliente -->
+        <Label Content="Cliente" Grid.Row="5"/>
+        <ComboBox x:Name="ComboBoxClientes" Grid.Row="6" DisplayMemberPath="FullName" SelectedValuePath="Id"/>
+
+        <!-- Botones -->
+        <StackPanel Grid.Row="7" Orientation="Horizontal" HorizontalAlignment="Right" Margin="0,10,0,0">
+            <Button Content="Cancelar" Width="100" Margin="0,0,10,0" Click="Cancel_Click"/>
+            <Button Content="Guardar" Width="100" Click="Save_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

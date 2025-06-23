@@ -1,0 +1,61 @@
+﻿<UserControl x:Class="prueba_tecnica_agroexport.Pages.Receptions.ReceptionViewControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:prueba_tecnica_agroexport.Pages.Receptions"
+             xmlns:l="clr-namespace:prueba_tecnica_agroexport.Helpers"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid Loaded="ReceptionViewControl_Loaded" Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <!-- Fila de controles -->
+            <RowDefinition Height="*"/>
+            <!-- DataGrid -->
+        </Grid.RowDefinitions>
+
+        <!-- Barra superior: buscador + botones -->
+        <DockPanel Grid.Row="0" Margin="0,0,0,10">
+            <!-- Buscador a la izquierda -->
+            <TextBox x:Name="SearchBox"
+                     Width="300"
+                     Margin="0,0,10,0"
+                     FontSize="14"
+                     TextChanged="SearchBox_TextChanged"
+                     l:TextBoxHelper.Placeholder="Buscar..."
+                     VerticalAlignment="Center"/>
+
+            <!-- Botones alineados a la derecha -->
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <Button x:Name="DeleteButton" Content="Eliminar" Width="90" Margin="5,0" Click="DeleteButton_Click"/>
+                <Button x:Name="EditButton" Content="Editar" Width="90" Margin="5,0" Click="EditButton_Click"/>
+                <Button x:Name="AddButton" Content="Agregar" Width="90" Margin="5,0" Click="Add_Click"/>
+            </StackPanel>
+        </DockPanel>
+
+        <!-- Tabla -->
+        <DataGrid x:Name="ReceptionGrid"
+                  Grid.Row="1"
+                  AutoGenerateColumns="False"
+                  IsReadOnly="True"
+                  SelectionChanged="OrderGrid_SelectionChanged"
+                  HeadersVisibility="Column"
+                  CanUserAddRows="False"
+                  CanUserDeleteRows="False"
+                  Margin="0"
+                  ColumnWidth="*">
+
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding Id}" Width="50"/>
+                <DataGridTextColumn Header="Proveedor" Binding="{Binding FullName}" Width="150"/>
+                <DataGridTextColumn Header="Razón social" Binding="{Binding SocialReason}" Width="200"/>
+                <DataGridTextColumn Header="Tipo de madera" Binding="{Binding WoodTypeName}" Width="150"/>
+                <DataGridTextColumn Header="Unidades" Binding="{Binding PieceCount}" Width="80"/>
+                <DataGridTextColumn Header="Peso promedio" Binding="{Binding AverageWeight}" Width="100"/>
+                <DataGridTextColumn Header="Total peso" Binding="{Binding TotalWeight}" Width="100"/>
+                <DataGridTextColumn Header="Fecha recepción" Binding="{Binding ReceptionDate, StringFormat=\{0:yyyy-MM-dd\}}" Width="130"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
