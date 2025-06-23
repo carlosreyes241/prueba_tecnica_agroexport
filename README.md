@@ -3,20 +3,21 @@
 Este proyecto es una aplicación de escritorio desarrollada en C# con WPF, diseñada para demostrar funcionalidades de conexión a base de datos, manejo de modelos y vistas, y operaciones CRUD.
 
 ## 📁 Estructura del Proyecto
-
-prueba-tecnica-agroexport/
-├── Assets/ # Archivos estáticos o recursos gráficos
-├── bin/ # Archivos compilados
-├── DbConnections/ # Archivos de conexión a la base de datos
-├── Helpers/ # Clases auxiliares o utilitarias
-├── Models/ # Modelos de datos
-├── obj/ # Archivos generados por el compilador
-├── Pages/ # Vistas o páginas de la aplicación
-├── App.xaml # Archivo de aplicación WPF
-├── App.xaml.cs # Código de inicio de la aplicación
-├── MainWindow.xaml # Interfaz principal
-├── MainWindow.xaml.cs # Lógica de la interfaz principal
-├── prueba-tecnica-agroexport.csproj # Archivo de proyecto C#
+```
+prueba-tecnica-agroexport/  
+├── App.xaml                 # Archivo de aplicación WPF  
+├── App.xaml.cs             # Código de inicio de la aplicación  
+├── Assets/                 # Archivos estáticos o recursos gráficos  
+├── DbConnections/          # Archivos de conexión a la base de datos  
+├── Helpers/                # Clases auxiliares o utilitarias  
+├── MainWindow.xaml         # Interfaz principal  
+├── MainWindow.xaml.cs      # Lógica de la interfaz principal  
+├── Models/                 # Modelos de datos  
+├── Pages/                  # Vistas o páginas de la aplicación  
+├── bin/                    # Archivos compilados  
+├── obj/                    # Archivos generados por el compilador  
+├── prueba-tecnica-agroexport.csproj  # Archivo de proyecto C#  
+```
 
 
 ## 🚀 Cómo Ejecutar el Proyecto
